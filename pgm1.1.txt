@@ -1,0 +1,14 @@
+CREATE OR REPLACE PROCEDURE CalculateFactorial(
+  num IN NUMBER,
+  result OUT NUMBER
+) IS
+BEGIN
+  result := 1;
+  
+  FOR i IN 1..num LOOP
+    result := result * i;
+  END LOOP;
+  
+  DBMS_OUTPUT.PUT_LINE('The factorial of ' || num || ' is: ' || result);
+END;
+/
